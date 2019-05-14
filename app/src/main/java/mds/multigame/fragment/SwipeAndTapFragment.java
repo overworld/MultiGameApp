@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.RelativeLayout;
+
 import mds.multigame.MainActivity;
 import mds.multigame.R;
 import mds.multigame.utils.ActivityUtils;
@@ -29,6 +30,7 @@ public class SwipeAndTapFragment extends Fragment {
         boolean bool = getArguments().getBoolean("isSwape");
         String game = getArguments().getString("drag");
         String ipac = getArguments().getString("ipac");
+        String settings = getArguments().getString("settings");
 
 
 
@@ -53,6 +55,18 @@ public class SwipeAndTapFragment extends Fragment {
                     bundle.putString("ipac", "ipac");
                     fragment.setArguments(bundle);
                     ActivityUtils.addFragmentToActivity(getChildFragmentManager(), fragment, relativeLayout.getId(), IpacGameFragment.TAG);
+                }
+            });
+
+        } else if (settings == "ok") {
+            start.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Fragment fragment = new SettingsFragment();
+                    Bundle bundle = new Bundle();
+                    bundle.putString("settings", "settings");
+                    fragment.setArguments(bundle);
+                    ActivityUtils.addFragmentToActivity(getChildFragmentManager(), fragment, relativeLayout.getId(), SettingsFragment.TAG);
                 }
             });
 

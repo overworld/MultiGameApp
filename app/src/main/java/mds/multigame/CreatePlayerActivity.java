@@ -2,21 +2,18 @@ package mds.multigame;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.graphics.Bitmap;
 import android.location.Criteria;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
-import android.net.Uri;
+import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -25,7 +22,6 @@ import android.widget.Toast;
 
 import com.squareup.picasso.Picasso;
 
-import java.io.IOException;
 import java.util.ArrayList;
 
 import io.realm.Realm;
@@ -136,9 +132,9 @@ public class CreatePlayerActivity extends AppCompatActivity {
         btn_valider = findViewById(R.id.btn_valider);
         btn_joueur = findViewById(R.id.btn_joueur);
 
-        for (int i = 0; i <= 50; i++)
+        for (int i = 0; i <= 5; i++)
         {
-            addUserDbb(new Player("baptiste" + i , "Jean Luc", "annecy", "img"  ,+ 27));
+            addUserDbb(new Player("Spencer" + i , "Toby", "annecy", "img"  ,+ 27,0,0,0,0));
         }
         getAllPlayers();
 
@@ -171,7 +167,11 @@ public class CreatePlayerActivity extends AppCompatActivity {
                 if (input_age != null && input_name != null && input_prenom != null && localisationData != null && imageUri != null && input_ville != null) {
                     int year = Integer.parseInt(input_age.getText().toString());
 
-                    Player Joueur = new Player(input_name.getText().toString(), imageUri, input_prenom.getText().toString(), localisationData, year);
+                    int scoreDnD = 0;
+                    int scoreFTG =0;
+                    int scoreIpac =0;
+                    int scoreSwipe =0;
+                    Player Joueur = new Player(input_name.getText().toString(), imageUri, input_prenom.getText().toString(), localisationData, year,scoreDnD,scoreFTG,scoreIpac,scoreSwipe);
                     addUserDbb(Joueur);
                     ActivityUtils.launchActivity(CreatePlayerActivity.this, MainActivity.class, true,1);
                     PlayerManager.getInstance().setPlayer(Joueur);

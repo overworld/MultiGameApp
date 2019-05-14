@@ -1,7 +1,6 @@
 package mds.multigame.fragment;
 
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -15,7 +14,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.AnimationUtils;
 import android.view.inputmethod.EditorInfo;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -40,7 +38,6 @@ public class IpacGameFragment extends Fragment{
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_ipac_game, container, false);
-        //Instancier vos composants graphique ici (faîtes vos findViewById)
 
             numbertryTV = view.findViewById(R.id.main_nbtry);
             numberInsert = view.findViewById(R.id.main_nbInsert);
@@ -60,7 +57,7 @@ public class IpacGameFragment extends Fragment{
                     if (!numberInsert.getText().toString().isEmpty()) {
                         int number = Integer.valueOf(numberInsert.getText().toString());
                         if (number == numberfind) {
-                            scorefinal = String.valueOf(numberoftry) + "essais" ;
+                            scorefinal = String.valueOf(numberoftry) + " essais" ;
                             Intent intent = new Intent((AppCompatActivity) IpacGameFragment.this.getActivity(), EndActivity.class);
                             intent.putExtra(EndActivity.SCORE, scorefinal);
                             intent.putExtra(EndActivity.NOMDUJEU, nomdujeu);

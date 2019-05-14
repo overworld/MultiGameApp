@@ -8,11 +8,8 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 
 import java.util.ArrayList;
-import java.util.List;
 
-import mds.multigame.fragment.DragnDropFragment;
 import mds.multigame.fragment.FastTapGameFragment;
-import mds.multigame.fragment.IpacGameFragment;
 import mds.multigame.fragment.SettingsFragment;
 import mds.multigame.fragment.SwipeAndTapFragment;
 import mds.multigame.utils.CustomViewPager;
@@ -32,10 +29,7 @@ public class MainActivity extends AppCompatActivity implements TabLayout.OnTabSe
         viewPager.addOnPageChangeListener(this);
         tabLayout.addOnTabSelectedListener(this);
 
-
         final ArrayList<Fragment> fragments = new ArrayList<>();
-
-
 
         Bundle bundle3 = new Bundle();
         bundle3.putString("drag", "ok");
@@ -62,7 +56,12 @@ public class MainActivity extends AppCompatActivity implements TabLayout.OnTabSe
         ipacFragment.setArguments(ipacbundle);
         fragments.add(ipacFragment);
 
-        fragments.add(new SettingsFragment());
+
+        Bundle settingbundle = new Bundle();
+        settingbundle.putString("settings", "ok");
+        SettingsFragment settingsfragment = new SettingsFragment();
+        settingsfragment.setArguments(settingbundle);
+        fragments.add(settingsfragment);
 
         FragmentStatePagerAdapter adapter = new FragmentStatePagerAdapter(getSupportFragmentManager()) {
             @Override
@@ -104,8 +103,7 @@ public class MainActivity extends AppCompatActivity implements TabLayout.OnTabSe
 
             for (Fragment subfragment : currentfragment.getChildFragmentManager().getFragments()) {
 
-                if (subfragment.getTag() != null && subfragment.getTag().equals(FastTapGameFragment.TAG))
-                {
+                if (subfragment.getTag() != null && subfragment.getTag().equals(FastTapGameFragment.TAG)) {
                     subfragment.getFragmentManager().popBackStack();
                 }
             }

@@ -12,7 +12,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.Random;
 import java.util.Timer;
@@ -20,8 +19,8 @@ import java.util.TimerTask;
 
 import mds.multigame.EndActivity;
 import mds.multigame.R;
-import mds.multigame.utils.OnSwipeTouchListener;
 import mds.multigame.utils.ActivityUtils;
+import mds.multigame.utils.OnSwipeTouchListener;
 
 public class FastTapGameFragment extends Fragment {
 

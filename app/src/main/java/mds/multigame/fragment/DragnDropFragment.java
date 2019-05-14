@@ -2,10 +2,7 @@ package mds.multigame.fragment;
 
 import android.content.ClipData;
 import android.content.ClipDescription;
-import android.content.Context;
 import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.NonNull;
@@ -19,11 +16,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
-
 
 import java.util.Random;
 import java.util.Timer;
@@ -196,37 +190,37 @@ public class DragnDropFragment extends Fragment {
 
                 if (view == deepBlue && 0 == result) {
                     nb = nb + 1;
-                    score.setText("Score : " + nb);
+                    score.setText(getString(R.string.score, + nb));
                     randomGenerator();
 
                 }
                 if (view == green && 1 == result) {
                     nb = nb + 1;
-                    score.setText("Score : " + nb);
+                    score.setText(getString(R.string.score, + nb));
                     randomGenerator();
 
                 }
                 if (view == red && 2 == result) {
                     nb = nb + 1;
-                    score.setText("Score : " + nb);
+                    score.setText(getString(R.string.score, + nb));
                     randomGenerator();
 
                 }
                 if (view == purple && 3 == result) {
                     nb = nb + 1;
-                    score.setText("Score : " + nb);
+                    score.setText(getString(R.string.score, + nb));
                     randomGenerator();
 
                 }
                 if (view == yellow && 4 == result) {
                     nb = nb + 1;
-                    score.setText("Score : " + nb);
+                    score.setText(getString(R.string.score, + nb));
                     randomGenerator();
 
                 }
                 if (view == blue && 5 == result) {
                     nb = nb + 1;
-                    score.setText("Score : " + nb);
+                    score.setText(getString(R.string.score, + nb));
                     randomGenerator();
 
                 }

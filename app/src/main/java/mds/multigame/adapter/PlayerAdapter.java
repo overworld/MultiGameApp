@@ -1,6 +1,5 @@
 package mds.multigame.adapter;
 
-import android.app.Activity;
 import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -18,7 +17,6 @@ import java.util.ArrayList;
 
 import mds.multigame.MainActivity;
 import mds.multigame.R;
-import mds.multigame.ShowPlayerActivity;
 import mds.multigame.manager.PlayerManager;
 import mds.multigame.model.Player;
 import mds.multigame.utils.ActivityUtils;

@@ -19,4 +19,10 @@
     <string name="nb_essaie">Il vous reste %d essais</string>
     <string name="indicator_plus">C"est plus !</string>
     <string name="indicator_moins">C"est moins !</string>
+    <string name="splashScreenTitle">A Mydigital School Project</string>
+    <string name="settingsTitle">Settings</string>
+    <string name="SettingsScoreRow">%d</string>
+    <string name="namegamescore">%d</string>
+    <string name="deconnexion">deconnexion</string>
+
 </resources>
