@@ -1,15 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:gravity="center"
+    android:background="@color/colorPrimary"
     >
 
+
     <TextView
-        android:layout_width="match_parent"
+        android:id="@+id/main_nbtry"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ipac Game"
+        android:text="@string/nb_essaie"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/colorAccent"
+        android:textSize="25sp"
+        />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        />
+
+    <EditText
+        android:id="@+id/main_nbInsert"
+        android:inputType="number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/insert_nb"
         android:textAlignment="center"
-        android:textSize="30sp"
+        android:textColorHint="@color/colorAccent"
+        android:textSize="35sp"
+        android:maxLength="3"
+        />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        />
+
+
+
+    <TextView
+        android:id="@+id/main_more_less"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/indicator_plus"
+        android:textColor="@color/colorAccent"
+        android:textSize="50sp"
+        android:visibility="invisible"
+
+
+        />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        />
+
+    <Button
+        android:id="@+id/main_validate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btnvalider"
+        android:layout_marginBottom="20dp"
+        android:textSize="40sp"
         />
 
 </LinearLayout>

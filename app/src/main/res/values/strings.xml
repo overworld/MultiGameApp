@@ -15,4 +15,8 @@
     <string name="nomdujeu">%d</string>
     <string name="quitter">Quitter</string>
     <string name="menu">Menu</string>
+    <string name="insert_nb">Nombre</string>
+    <string name="nb_essaie">Il vous reste %d essais</string>
+    <string name="indicator_plus">C"est plus !</string>
+    <string name="indicator_moins">C"est moins !</string>
 </resources>

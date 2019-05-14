@@ -55,7 +55,13 @@ public class MainActivity extends AppCompatActivity implements TabLayout.OnTabSe
         swipeAndTapFragment1.setArguments(bundle1);
         fragments.add(swipeAndTapFragment1);
 
-        fragments.add(new IpacGameFragment());
+
+        Bundle ipacbundle = new Bundle();
+        ipacbundle.putString("ipac", "ok");
+        SwipeAndTapFragment ipacFragment = new SwipeAndTapFragment();
+        ipacFragment.setArguments(ipacbundle);
+        fragments.add(ipacFragment);
+
         fragments.add(new SettingsFragment());
 
         FragmentStatePagerAdapter adapter = new FragmentStatePagerAdapter(getSupportFragmentManager()) {

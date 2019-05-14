@@ -28,11 +28,11 @@ public class SwipeAndTapFragment extends Fragment {
 
         boolean bool = getArguments().getBoolean("isSwape");
         String game = getArguments().getString("drag");
+        String ipac = getArguments().getString("ipac");
 
 
 
-        if(game == "ok")
-        {
+        if(game == "ok") {
             start.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -44,6 +44,18 @@ public class SwipeAndTapFragment extends Fragment {
                     ActivityUtils.addFragmentToActivity(getChildFragmentManager(), fragment, relativeLayout.getId(), DragnDropFragment.TAG);
                 }
             });
+        } else if (ipac == "ok") {
+            start.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Fragment fragment = new IpacGameFragment();
+                    Bundle bundle = new Bundle();
+                    bundle.putString("ipac", "ipac");
+                    fragment.setArguments(bundle);
+                    ActivityUtils.addFragmentToActivity(getChildFragmentManager(), fragment, relativeLayout.getId(), IpacGameFragment.TAG);
+                }
+            });
+
         } else if (bool == false) {
             start.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -68,6 +80,8 @@ public class SwipeAndTapFragment extends Fragment {
                 }
             });
         }
+
+
 
         return view;
 
