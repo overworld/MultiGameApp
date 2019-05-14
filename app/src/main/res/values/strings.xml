@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">MultiGame</string>
+    <string name="bvn">Welcome !</string>
+    <string name="btnvalider">Valider!</string>
+    <string name="btnname">Nom</string>
+    <string name="btnprenom">prenom</string>
+    <string name="btnage">Age</string>
+    <string name="btnville">Localisation</string>
+    <string name="btnjoueur">Joueurs</string>
+    <string name="nomjoueur">nom</string>
+    <string name="prenomjoueur">prenom</string>
+    <string name="tempsrestant">Temps restant : %d secondes</string>
+    <string name="taporlongtap">%d </string>
+    <string name="score">Score : %d </string>
+    <string name="nomdujeu">%d</string>
+    <string name="quitter">Quitter</string>
+    <string name="menu">Menu</string>
+</resources>

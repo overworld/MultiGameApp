@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/zoneglobale"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical"
+    tools:context=".CreatePlayerActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <FrameLayout
+            android:id="@+id/deepblue"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:background="@color/deepblue" />
+
+
+        <FrameLayout
+            android:id="@+id/green"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:background="@color/green" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+
+        <FrameLayout
+            android:id="@+id/red"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/red" />
+
+
+        <RelativeLayout
+            android:id="@+id/centerdrag"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="3">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/timedrag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tempsrestant"
+                        android:textSize="12sp"
+                        android:layout_marginTop="60dp"
+                        />
+
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    />
+
+
+                    <TextView
+                        android:id="@+id/scoredrag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/score"
+                        android:textSize="12sp"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="60dp"
+                        />
+
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/shape"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/circle"
+                android:layout_centerInParent="true"
+                />
+
+
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/purple"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/purple" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <FrameLayout
+            android:id="@+id/yellow"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:background="@color/yellow" />
+
+
+        <FrameLayout
+            android:id="@+id/blue"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:background="@color/blue" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

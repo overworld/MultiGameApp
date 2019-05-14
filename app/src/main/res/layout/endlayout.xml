@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    >
+
+    <TextView
+        android:id="@+id/nomdujeu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/nomdujeu"
+        android:textSize="40sp"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimaryDark"
+        />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.1"/>
+
+    <TextView
+        android:id="@+id/scorefin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/score"
+        android:textSize="40sp"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimaryDark"
+        />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.1"/>
+
+    <Button
+        android:id="@+id/menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="@string/menu"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:background="@color/ButtonAlternativeColor"
+        />
+
+    <Button
+        android:id="@+id/quitter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:text="@string/quitter"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:background="@color/ButtonAlternativeColor"
+
+        />
+
+
+</LinearLayout>
