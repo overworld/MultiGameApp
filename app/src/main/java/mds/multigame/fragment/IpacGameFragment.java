@@ -34,6 +34,7 @@ public class IpacGameFragment extends Fragment{
     private int numberfind;
     private int numberoftry = NUMBERTRY;
     private String nomdujeu = "Ipac Game";
+    public static final String NAME_IPAC = "Ipac Game";
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -61,6 +62,7 @@ public class IpacGameFragment extends Fragment{
                             Intent intent = new Intent((AppCompatActivity) IpacGameFragment.this.getActivity(), EndActivity.class);
                             intent.putExtra(EndActivity.SCORE, scorefinal);
                             intent.putExtra(EndActivity.NOMDUJEU, nomdujeu);
+                            intent.putExtra(EndActivity.RESULTAT, numberoftry );
                             ActivityUtils.launchActivity((AppCompatActivity) IpacGameFragment.this.getActivity(), intent, false, 0);
                             getFragmentManager().popBackStack();
                         } else {

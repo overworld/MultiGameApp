@@ -46,7 +46,7 @@ public class DragnDropFragment extends Fragment {
     private int nb = 0;
     private int temps = 10;
     private TextView tempsrestant;
-    private String nomdujeu = "Drag N Drop";
+    public static final String NAME_DND = "Drag N Drop";
 
 
     @Override
@@ -113,7 +113,8 @@ public class DragnDropFragment extends Fragment {
                             scorefinal = score.getText().toString();
                             Intent intent = new Intent((AppCompatActivity) DragnDropFragment.this.getActivity(), EndActivity.class);
                             intent.putExtra(EndActivity.SCORE, scorefinal);
-                            intent.putExtra(EndActivity.NOMDUJEU, nomdujeu);
+                            intent.putExtra(EndActivity.NOMDUJEU, NAME_DND);
+                            intent.putExtra(EndActivity.RESULTAT, nb );
                             ActivityUtils.launchActivity((AppCompatActivity) DragnDropFragment.this.getActivity(), intent, false, 0);
                             getFragmentManager().popBackStack();
                         }

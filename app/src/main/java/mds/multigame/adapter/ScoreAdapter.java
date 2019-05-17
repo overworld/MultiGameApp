@@ -25,7 +25,21 @@ public class ScoreAdapter extends RecyclerView.Adapter<ScoreAdapter.ViewHolder> 
         this.gameNames = gamelist;
         this.theFragment = fragment;
     }
+    class ViewHolder extends RecyclerView.ViewHolder {
+        private LinearLayout rowScore;
+        private ImageView smiley;
+        private TextView gamename;
+        private TextView score;
 
+        ViewHolder(View itemView) {
+            super(itemView);
+            rowScore = itemView.findViewById(R.id.liste_score);
+            smiley = itemView.findViewById(R.id.smiley);
+            gamename = itemView.findViewById(R.id.nomdujeu);
+            score = itemView.findViewById(R.id.res);
+        }
+
+    }
 
     @NonNull
     @Override
@@ -40,18 +54,18 @@ public class ScoreAdapter extends RecyclerView.Adapter<ScoreAdapter.ViewHolder> 
         final String listjeu = gameNames.get(position);
         viewHolder.gamename.setText(listjeu);
 
-/*        if (listjeu == "DragnDrop") {
-            viewHolder.score.setText(PlayerManager.getInstance().getPlayer().getScoreDnD());
+            if (listjeu .equals( "DragnDrop")) {
+                viewHolder.score.setText( String.valueOf(PlayerManager.getInstance().getPlayer().getScoreDnD()));
 
-        } else if (listjeu == "Swipe") {
-            viewHolder.score.setText(PlayerManager.getInstance().getPlayer().getScoreSwipe());
+            } else if (listjeu .equals( "Swipe")) {
+                viewHolder.score.setText( String.valueOf(PlayerManager.getInstance().getPlayer().getScoreSwipe()));
 
-        } else if (listjeu == "Fast Tap") {
-            viewHolder.score.setText(PlayerManager.getInstance().getPlayer().getScoreFTG());
+            } else if (listjeu .equals( "Fast Tap")) {
+                viewHolder.score.setText( String.valueOf(PlayerManager.getInstance().getPlayer().getScoreFTG()));
 
-        } else if (listjeu == "Ipac Game") {
-            viewHolder.score.setText(PlayerManager.getInstance().getPlayer().getScoreIpac());
-        }*/
+            } else if (listjeu .equals( "Ipac Game")) {
+                viewHolder.score.setText( String.valueOf(PlayerManager.getInstance().getPlayer().getScoreIpac()));
+            }
 
     }
 
@@ -61,20 +75,6 @@ public class ScoreAdapter extends RecyclerView.Adapter<ScoreAdapter.ViewHolder> 
     }
 
 
-    class ViewHolder extends RecyclerView.ViewHolder {
-        private LinearLayout rowScore;
-        private ImageView smiley;
-        private TextView gamename;
-        private TextView score;
 
-        ViewHolder(View itemView) {
-            super(itemView);
-            rowScore = itemView.findViewById(R.id.liste_score);
-            smiley = itemView.findViewById(R.id.smiley);
-            gamename = itemView.findViewById(R.id.nomdujeu);
-            score = itemView.findViewById(R.id.score);
-        }
-
-    }
 
 }

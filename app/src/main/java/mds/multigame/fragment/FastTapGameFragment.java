@@ -23,6 +23,8 @@ import mds.multigame.utils.ActivityUtils;
 import mds.multigame.utils.OnSwipeTouchListener;
 
 public class FastTapGameFragment extends Fragment {
+    public static final String NAME_SWIPE = "Swipe Game";
+    public static final String NAME_FTG = "Fast Tap Game";
 
     public static final String TAG = "SwipeAndTapFragment";
 
@@ -189,6 +191,7 @@ public class FastTapGameFragment extends Fragment {
                             Intent intent = new Intent((AppCompatActivity) FastTapGameFragment.this.getActivity(), EndActivity.class);
                             intent.putExtra(EndActivity.SCORE, scorefinal);
                             intent.putExtra(EndActivity.NOMDUJEU, nomdujeu);
+                            intent.putExtra(EndActivity.RESULTAT, nb );
                             ActivityUtils.launchActivity((AppCompatActivity) FastTapGameFragment.this.getActivity(), intent, false, 0);
                             getFragmentManager().popBackStack();
                         }

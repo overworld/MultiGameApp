@@ -52,7 +52,7 @@ public class CreatePlayerActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == REQUEST_PICK_PICTURE && resultCode == RESULT_OK) {
-            imageUri = data.getData().getPath();
+            imageUri = data.getData().toString();
             Picasso.get().load(data.getData()).into(image);
 
         }
@@ -98,9 +98,7 @@ public class CreatePlayerActivity extends AppCompatActivity {
         try {
             mRealmInstance.copyToRealmOrUpdate(player);
             mRealmInstance.commitTransaction();
-        }
-        catch (Exception e)
-        {
+        } catch (Exception e) {
             String a = "";
         }
     }
@@ -132,9 +130,8 @@ public class CreatePlayerActivity extends AppCompatActivity {
         btn_valider = findViewById(R.id.btn_valider);
         btn_joueur = findViewById(R.id.btn_joueur);
 
-        for (int i = 0; i <= 5; i++)
-        {
-            addUserDbb(new Player("Spencer" + i , "Toby", "annecy", "img"  ,+ 27,0,0,0,0));
+        for (int i = 0; i <= 5; i++) {
+            addUserDbb(new Player("Spencer" + i, "Toby", "annecy", "img", +27, 0, 0, 0, 0));
         }
         getAllPlayers();
 
@@ -168,12 +165,12 @@ public class CreatePlayerActivity extends AppCompatActivity {
                     int year = Integer.parseInt(input_age.getText().toString());
 
                     int scoreDnD = 0;
-                    int scoreFTG =0;
-                    int scoreIpac =0;
-                    int scoreSwipe =0;
-                    Player Joueur = new Player(input_name.getText().toString(), imageUri, input_prenom.getText().toString(), localisationData, year,scoreDnD,scoreFTG,scoreIpac,scoreSwipe);
+                    int scoreFTG = 0;
+                    int scoreIpac = 0;
+                    int scoreSwipe = 0;
+                    Player Joueur = new Player(input_name.getText().toString(), input_prenom.getText().toString(), localisationData, imageUri, year, scoreDnD, scoreFTG, scoreIpac, scoreSwipe);
                     addUserDbb(Joueur);
-                    ActivityUtils.launchActivity(CreatePlayerActivity.this, MainActivity.class, true,1);
+                    ActivityUtils.launchActivity(CreatePlayerActivity.this, MainActivity.class, true, 1);
                     PlayerManager.getInstance().setPlayer(Joueur);
 
                 } else {

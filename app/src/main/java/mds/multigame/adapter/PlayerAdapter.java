@@ -16,7 +16,9 @@ import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 
 import mds.multigame.MainActivity;
+import mds.multigame.ProfilActivity;
 import mds.multigame.R;
+import mds.multigame.ShowPlayerActivity;
 import mds.multigame.manager.PlayerManager;
 import mds.multigame.model.Player;
 import mds.multigame.utils.ActivityUtils;
@@ -53,7 +55,17 @@ public class PlayerAdapter extends RecyclerView.Adapter<PlayerAdapter.ViewHolder
                 ActivityUtils.launchActivity(theActivity,MainActivity.class);
             }
         });
+        viewHolder.rowplayer.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                PlayerManager.getInstance().setPlayer(player);
+                ActivityUtils.launchActivity(theActivity,ProfilActivity.class);
+                return false;
+            }
+        });
     }
+
+
 
     @Override
     public int getItemCount() {

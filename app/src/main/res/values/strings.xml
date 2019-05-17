@@ -24,5 +24,8 @@
     <string name="SettingsScoreRow">%d</string>
     <string name="namegamescore">%d</string>
     <string name="deconnexion">deconnexion</string>
-
+    <string name="profillocalisation">%d</string>
+    <string name="profilage">%d</string>
+    <string name="profilnom">%d</string>
+    <string name="profilprenom">%d</string>
 </resources>

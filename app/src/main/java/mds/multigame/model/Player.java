@@ -1,9 +1,6 @@
 package mds.multigame.model;
 
-import android.widget.EditText;
-
-import java.lang.reflect.Constructor;
-
+import io.realm.Realm;
 import io.realm.RealmObject;
 import io.realm.annotations.PrimaryKey;
 
@@ -35,6 +32,19 @@ public class Player extends RealmObject {
 
     public Player() {
 
+    }
+
+    public void addUserDbb(Player player) {
+        Realm mRealmInstance = Realm.getDefaultInstance();
+        mRealmInstance.beginTransaction();
+        try {
+            mRealmInstance.copyToRealmOrUpdate(player);
+            mRealmInstance.commitTransaction();
+        }
+        catch (Exception e)
+        {
+            String a = "";
+        }
     }
 
     public String getName() {
@@ -81,9 +91,7 @@ public class Player extends RealmObject {
         return scoreDnD;
     }
 
-    public void setScoreDnD(int scoreDnD) {
-        this.scoreDnD = scoreDnD;
-    }
+    public void setScoreDnD(int scoreDnD) { this.scoreDnD = scoreDnD;  }
 
     public int getScoreFTG() {
         return scoreFTG;
@@ -101,9 +109,7 @@ public class Player extends RealmObject {
         this.scoreIpac = scoreIpac;
     }
 
-    public int getScoreSwipe() {
-        return scoreSwipe;
-    }
+    public int getScoreSwipe() { return scoreSwipe;   }
 
     public void setScoreSwipe(int scoreSwipe) {
         this.scoreSwipe = scoreSwipe;
